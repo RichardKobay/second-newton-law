@@ -1,7 +1,7 @@
 const isRadio = document.getElementById("is")
 const usRadio = document.getElementById("us")
 
-isRadio.addEventListener("click", () => {
+isRadio.addEventListener("click", (e) => {
     const weightInput = document.getElementById("weight_input")
     const massInput = document.getElementById("mass_input")
     const acelerationInput = document.getElementById("aceleration_input")

@@ -15,21 +15,22 @@
 <body>
     <div id="app" class="app">
         <div id="formContainer" class="form-container">
-            <form action="view.php" method="post" id="form" class="form">
+            <form action="/src/php/gettingValues.php" method="get" id="form" class="form">
                 <h1 class="title">Segunda ley de Newton</h1>
                 <div class="radio-container">
-                    <input class="radio" type="radio" name="system" id="is" checked>
+                    <input class="radio" type="radio" value="isSystem" name="system" id="is" checked>
                     <label for="is">SI</label>
-                    <input class="radio" type="radio" name="system" id="us">
+                    <input class="radio" type="radio" value="usSystem" name="system" id="us">
                     <label for="us">US</label>
                 </div>
                 <div class="inputs-container">
-                    <label for="weight">Peso</label>
-                    <input type="number" name="weight" id="weight_input" placeholder="N">
+                    <label for="force">Fuerza</label>
+                    <input type="number" name="force" id="weight_input" placeholder="N">
                     <label for="mass">Masa</label>
                     <input type="number" name="mass" id="mass_input" placeholder="Kg">
                     <label for="aceleration">Aceleración</label>
                     <input type="number" name="aceleration" id="aceleration_input" placeholder="m/s²">
+                    <input type="submit" value="Calcular">
                 </div>
             </form>
         </div>

@@ -115,3 +115,42 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 input[type=number] { -moz-appearance:textfield; }
+
+input[type=submit] {
+  margin: 2em;
+  cursor: pointer;
+  color: #000;
+}
+
+input[type=submit]:hover {
+  transform: scale(105%);
+}
+
+a button:hover {
+  transform: scale(110%);
+}
+
+a button {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  font-size: 1.5em;
+  padding: 0.1em;
+  width: 100%;
+  text-align: center;
+  margin: 2em;
+  cursor: pointer;
+  color: #000;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+}
