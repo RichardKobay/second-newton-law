@@ -18,5 +18,5 @@ usRadio.addEventListener("click", () => {
 
     weightInput.setAttribute("placeholder", "lb")
     massInput.setAttribute("placeholder", "slugs")
-    acelerationInput.setAttribute("placeholder", "ni idea")
+    acelerationInput.setAttribute("placeholder", "ft/s²")
 })
