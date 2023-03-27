@@ -14,28 +14,15 @@
 
 <body>
     <div id="app" class="app">
-        <div id="formContainer" class="form-container">
-            <form action="/src/php/response.php" method="get" id="form" class="form">
-                <h1 class="title">Segunda ley de Newton</h1>
-                <div class="radio-container">
-                    <input class="radio" type="radio" value="isSystem" name="system" id="is" checked>
-                    <label for="is">SI</label>
-                    <input class="radio" type="radio" value="usSystem" name="system" id="us">
-                    <label for="us">US</label>
-                </div>
-                <div class="inputs-container">
-                    <label for="force">Fuerza</label>
-                    <input type="number" name="force" id="weight_input" placeholder="N" >
-                    <label for="mass">Masa</label>
-                    <input type="number" name="mass" id="mass_input" placeholder="Kg" >
-                    <label for="aceleration">Aceleración</label>
-                    <input type="number" name="aceleration" id="aceleration_input" placeholder="m/s²" >
-                    <input type="submit" value="Calcular">
-                </div>
-            </form>
+        <div>
+            <h1 class="title">¿Que quiere calcular?</h1>
+            <button class="button" id="btnSecondNewtonLaw">Segunda ley de newton</button>
+            <button class="button" id="btnAccelerationFormula">Fórmulas de la aceleración</button>
+            <button class="button" id="btnSumaVectorial">Suma vectorial</button>
         </div>
     </div>
-    <script src="/src/js/main.js"></script>
+    <script src="/src/js/buttonRedirectionIndex.js"></script>
+    <script src="/src/view/aceleration.php"></script>
 </body>
 
 </html>

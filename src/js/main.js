@@ -20,3 +20,4 @@ usRadio.addEventListener("click", () => {
     massInput.setAttribute("placeholder", "slugs")
     acelerationInput.setAttribute("placeholder", "ft/s²")
 })
+
