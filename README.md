@@ -447,5 +447,116 @@ Una demostración de como se vería esta pantalla hacia el usuario (utilizando c
 
 #### calcVectores.php
 
-Este archivo se encarga de calcular la suma vectorial.
+Este archivo se encarga de calcular la suma vectorial. (el orden en el que aquí se muestran las cosas es el orden de ejecución, el orden del código es difernete).
 
+Este archivo es llamado desde `src/view/vectorialSum.php` el cual contiene un form que va a enviar ciertos datos utilizando el método `GET` hacia este archivo
+
+Lo primero que hace este archivo es instanciar 4 variables las cuales son arrays, cada uno va a almaccenar lo que su nombre lo indica.
+
+```php
+$listaMagnitudes = array(); // Almacena las magnitudes de los vectores
+$listaDirecciones = array(); // Almacena las direcciones de los vectores
+$valoresX = array(); // Almacena los valores x de los vectores Fcos(X)
+$valoresY = array(); // Almacena los valores de y de los vectores Fsen(x)
+```
+
+Despues de eso crea una variable llamada `$nVectores` la cual va a alamcenar el número de vectores que seleccionó el usuario (desde un input vació en el HTML)
+
+```php
+$nVectores = $_GET['nVectores'];
+```
+
+Posteriormente realiza un ciclo de tipo `for` el cual se va a ejecutar desde 0 hasta `$nVecctores` el cual su funcionamiento va a ser almacenar la magnitud y la dirección de el vector con índice `$i` (estos son tomados del HTML)
+
+Posteriormente almacena sus valores de X y de Y en los arrays `$ValoresX[$i]` y `$ValoresY[$i]` respectivamente.
+
+Después se hace una pequeña excepción, ya que las funciones de `sin()` y  `cos()` de php solo aceptan radianes, por lo cual se nececita hacer un cambio de unidades, dentro del cuál con la función `deg2Rad()` al momento de hacer la conversión en los senos de 180 en vez de tomar un valor 0, toma un valor muy cercano a 0.
+
+```php
+for ($i=0; $i < $nVectores; $i++) { 
+    $magnitud = (int)$_GET["magnitud_$i"];
+    $direccion = (int)$_GET["direccion_$i"];
+    
+    $valoresX[$i] = ($magnitud * cos(deg2rad($direccion)));
+    $valoresY[$i] = ($magnitud * sin(deg2rad($direccion)));
+    
+    if ($direccion == 180) $valoresY[$i] = 0;
+    if ($direccion == 360) $valoresY[$i] = 0;
+    if ($direccion == 0) $valoresY[$i] = 0;
+}
+```
+
+Posteriormente se declaran 2 variables, las cuales son `$sumaX` y `$sumaY` las cuales van a tomar el valor que les retornen las funciones `sumarValoresX()` y `sumarValoresY()` Respectivamente.
+
+Ya que la funcinalidad de ambas es muy similar se explicará a fondo unicamente `sumarValoresX()`.
+
+- Lo primero que hace esta función es recibir 2 parámetros; el primero es un array el cual contiene todos los valores de x de todos los vectores, el segundo valor que recibe esta función es la cantidad de vectores que el usuario pidió.
+- Posteriormente declara una variable llamada `$sumaX` y se le asigna un valor de 0
+- Se instancia un ciclo `for` el cual va a recorrer desde 0 a la cantidad de vectores. Dentro de este for se va a hacer la sumatoria total de los valores de X desde el primer hasta el último vector.
+
+```php
+function sumarValoresX ($valoresX, $nVectores) {
+    $sumaX = 0;
+
+    for ($i=0; $i < $nVectores; $i++) { 
+        $sumaX = $sumaX + $valoresX[$i];
+    }
+    
+    return $sumaX;
+}
+```
+
+La función de sumarValoresY hace basicamente lo mismo pero con los valores en Y de los vectores.
+
+```php
+function sumarValoresY ($valoresY, $nVectores) {
+    $sumaY = 0;
+    
+    for ($i=0; $i < $nVectores; $i++) { 
+        $sumaY = $sumaY + $valoresY[$i];
+    }
+
+    return $sumaY;
+}
+```
+
+Posteriormente se declara una variable llamada `$fuerzaFinal` que adquiere el valor que le retorne la función `fuerzaFinal()`
+
+La función `fuerzaFinal($)` recibe 2 parámetros; el primero es la sumatoria de X y el segundo es la sumatoria de Y.
+
+La función se encarga de retornar el valor de la fuerza final con la fórmula correspondiente.
+
+```php
+function fuerzaFinal ($sumaX, $sumaY) {
+    return sqrt(pow($sumaX, 2) + pow($sumaY, 2));
+}
+```
+
+Despues de calcular la fuerza final, se nececita obtener el ángulo final, el cual se guarda en una variable llamada `$anguloFinal` la cual recibe el valor que retorne la funcion `anguloFinal()`.
+
+Esta función recibe 2 valores `$sumaX` y `$sumaY` y retorna el valor correspondiente del ángulo polar dependiendo del cuadrante en el que se encuentra, eso está validado por condicionales `if` para saber en que cuadrante se encuentra, en caso de que la fuerza final no pertenezca a ningún cuadrante se retorna 0
+
+```php
+function anguloFinal ($sumaX, $sumaY) {
+    if ($sumaX > 0 && $sumaY > 0) return abs(rad2deg(atan($sumaY / $sumaX)));
+    
+    if ($sumaX < 0 && $sumaY > 0) return 180 - abs(rad2deg(atan($sumaY / $sumaX)));
+    
+    if ($sumaX < 0 && $sumaY < 0) return 180 + abs(rad2deg(atan($sumaY / $sumaX)));
+    
+    if ($sumaX > 0 && $sumaY < 0) return 360 - abs(rad2deg(atan($sumaY / $sumaX)));
+
+    return 0;
+}
+```
+
+Posteriormente se tiene un HTML básico, en el cual, al igual que en los otros cálculos se muestra al usuario el resultado final mediante una etiqueta `<p>`
+
+```php
+<p class="text">La fuerza resultante es de: <?php echo $fuerzaFinal ?>
+con un ángulo de <?php echo $anguloFinal ?></p>
+```
+
+La visualización de la página suponiendo 2 vectores, uno de 20N con un ángulo de 15° y uno de 30N con un ángulo de 45° es:
+
+![Imagen de referencia](src/assets/img/docs/resultado_suma_vectorial.png "Imagen de referencia")
