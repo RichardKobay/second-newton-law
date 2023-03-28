@@ -1,4 +1,3 @@
-
 <?php
 
 /* 
@@ -11,13 +10,17 @@
  * We check which of the inputs is empty, then, we calculate the empty input with the formula F = ma
  * The result will be store in $ress that will show later in the html with it's corresponding unit
  * $empty is to check what are we showing to the user.
-*/
+ */
 
 $system = $_GET['system'];
 $force = $_GET['force'];
 $mass = $_GET['mass'];
 $aceleration = $_GET['aceleration'];
 $isInternationalSystem = ($system == 'isSystem') ? true : false;
+$ressult = "Las cantidades no fueron dadas de la forma correcta";
+$empty = "";
+$units = "";
+
 
 if ($isInternationalSystem) {
     if (empty($force)) {
@@ -25,13 +28,13 @@ if ($isInternationalSystem) {
         $units = 'N';
         $empty = "fuerza";
     }
-    
+
     if (empty($mass)) {
         $ressult = $force / $aceleration;
         $units = 'Kg';
         $empty = "masa";
     }
-    
+
     if (empty($aceleration)) {
         $ressult = $force / $mass;
         $units = 'm/s²';
@@ -45,24 +48,26 @@ if (!$isInternationalSystem) {
         $units = 'lb';
         $empty = "fuerza";
     }
-    
+
     if (empty($mass)) {
         $ressult = $force / $aceleration;
         $units = 'slugs';
         $empty = "masa";
     }
-    
+
     if (empty($aceleration)) {
         $ressult = $force / $mass;
         $units = 'ft/s²';
         $empty = "aceleración";
     }
 }
+
 ?>
 
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -70,7 +75,7 @@ if (!$isInternationalSystem) {
     <title>Calculadora Fuerza</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/main.css">
     <link rel="stylesheet" href="/src/css/normalize.css">
 </head>
@@ -78,7 +83,11 @@ if (!$isInternationalSystem) {
 <body>
     <div id="app" class="app">
         <h1 class="title">Resultado</h1>
-        <p class="text">La <?php echo $empty ?> es: <?php echo $ressult; echo $units?></p>
+        <p class="text">La
+            <?php echo $empty ?> es:
+            <?php echo $ressult;
+            echo $units ?>
+        </p>
         <a href="/index.php"><button>Regresar</button></a>
     </div>
     <script src="/src/js/main.js"></script>

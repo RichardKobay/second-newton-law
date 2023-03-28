@@ -32,6 +32,8 @@ btnCrearVectores.addEventListener("click", (e) => {
         magnitudInput.setAttribute("placeholder", `N`)
         magnitudInput.setAttribute("type", `number`)
         magnitudInput.setAttribute("step", "any")
+        magnitudInput.setAttribute("required", "")
+        magnitudInput.setAttribute("min", "1")
 
         
         direccionInput.setAttribute("name", `direccion_${i}`)
@@ -39,6 +41,9 @@ btnCrearVectores.addEventListener("click", (e) => {
         direccionInput.setAttribute("placeholder", `° (θ)`)
         direccionInput.setAttribute("type", `number`)
         direccionInput.setAttribute("step", `any`)
+        direccionInput.setAttribute("required", "")
+        direccionInput.setAttribute("min", "1")
+        direccionInput.setAttribute("max", "360")
 
         div.appendChild(magnitudLabel)
         div.appendChild(magnitudInput)
