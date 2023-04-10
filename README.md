@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="src/assets/img/docs/logo_upv.png" height="100px">
+</p>
+
 # Proyecto final
 
 Este es un simple proyecto final para la materia de física, la cual engloba todos los temas vistos con anterioridad en la clase.
@@ -402,7 +406,9 @@ Posteriormente se tiene un HTML básico, dentro del cual se tiene un título y u
 
 El resultado para el usuario con los datos de 2 para fuerza y 3 para masa es:
 
-![Imagen de referencia](src/assets/img/docs/calcular_segunda_ley_newton.png "Imagen de referencia")
+<p align="center">
+  <img src="src/assets/img/docs/calcular_segunda_ley_newton.png">
+</p>
 
 #### calcXFormula.php
 
@@ -443,7 +449,9 @@ Una demostración de como se vería esta pantalla hacia el usuario (utilizando c
 - Velocidad final: 20
 - Tiempo: 5
 
-![Imagen de referencia](src/assets/img/docs/primera_formula.png "Imagen de referencia")
+<p align="center">
+  <img src="src/assets/img/docs/primera_formula.png">
+</p>
 
 #### calcVectores.php
 
@@ -559,4 +567,6 @@ con un ángulo de <?php echo $anguloFinal ?></p>
 
 La visualización de la página suponiendo 2 vectores, uno de 20N con un ángulo de 15° y uno de 30N con un ángulo de 45° es:
 
-![Imagen de referencia](src/assets/img/docs/resultado_suma_vectorial.png "Imagen de referencia")
+<p align="center">
+  <img src="src/assets/img/docs/resultado_suma_vectorial.png">
+</p>

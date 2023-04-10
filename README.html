@@ -1,0 +1,709 @@
+<!DOCTYPE html><html><head>
+      <title>README</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///c:\Users\ricar\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.6.8\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <style>
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;background-color:#f0f0f0;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.markdown-preview .md-toc{padding:0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link p,.markdown-preview .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}.markdown-preview .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc{padding:0 16px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link{display:inline;padding:.25rem 0}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link p,html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper .md-toc-link div{display:inline}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc .md-toc .md-toc-link-wrapper.highlighted .md-toc-link{font-weight:800}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  300px/2);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/*   https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <p align="center">
+  <img src="src/assets/img/docs/logo_upv.png" height="100px">
+</p>
+<h1 class="mume-header" id="proyecto-final">Proyecto final</h1>
+
+<p>Este es un simple proyecto final para la materia de f&#xED;sica, la cual engloba todos los temas vistos con anterioridad en la clase.</p>
+<h2 class="mume-header" id="gu%C3%ADa-de-iniciaci%C3%B3n">Gu&#xED;a de iniciaci&#xF3;n</h2>
+
+<p>Este proyecto ya viene con todo incluido para su uso, ya que no cuenta con librerias externas, lo unico de lo que se nececitar&#xE1; para su uso es conexi&#xF3;n a internet, ya que las fuentes vienen de <a href="https://fonts.google.com/">google fonts</a>.</p>
+<p>Eso si, se necesitar&#xE1; de un servidor php, se puede hacer con <a href="https://www.apachefriends.org/download.html">xampp</a> o si ya se cuenta con php instalado en el pc, solamente se tiene que correr el servidor de desarrollo dentro de la carpeta del proyecto con <code>php -S localhost:port</code>.</p>
+<h2 class="mume-header" id="carpetas-principales">Carpetas principales</h2>
+
+<p>Todos los archivos principales del proyectos se encuentran dentro de la carpeta <code>src</code> dentro de las cuales se encuentran:</p>
+<ul>
+<li>
+<p><strong>index.php</strong><br>
+Aqu&#xED; se encuentra el archivo que se va a abrir primero en el servidor. El cual tiene un men&#xFA; en el cual el usuario puede escoger que funci&#xF3;n del programa desea usar <img src="src/assets/img/docs/pagina_principal.png" alt="Imagen de referencia a la p&#xE1;gina principal" title="Imagen de referencia a la p&#xE1;gina principal"></p>
+</li>
+<li>
+<p><strong>assets</strong><br>
+En esta carpeta se guradan todas las utilidades externas que se usaron, principalmente im&#xE1;genes, incluyendo las im&#xE1;genes de esta documentaci&#xF3;n</p>
+</li>
+<li>
+<p><strong>css</strong><br>
+Aqu&#xED; se encuentran todos los archivos css, <code>normalize.css</code> y <code>main.css</code></p>
+</li>
+<li>
+<p><strong>js</strong><br>
+En esta carpeta se guardan todos los archivos de javascript que se utilizaron para el correcto funcionamiento de la vista del usuario</p>
+</li>
+<li>
+<p><strong>php</strong><br>
+Dentro de esta carpeta se encuentran todos los archivos php en los que se encuentra la l&#xF3;gica para llegar a los resultados.</p>
+</li>
+<li>
+<p><strong>view</strong><br>
+Dentro de esta carpeta se encuentran todos los archivos php necesarios para la vista del usuario, esta es la carpeta a la que dependiendo de la selecci&#xF3;n del usuario en el index, va a mandarlo a uno de estos archivos</p>
+</li>
+</ul>
+<h2 class="mume-header" id="funcionalidad-principal-de-los-archivos">Funcionalidad principal de los archivos</h2>
+
+<h3 class="mume-header" id="indexphp">Index.php</h3>
+
+<p>Dentro de este archivo solo nos encontramos un HTML b&#xE1;sico en el cual nos encontraremos con 3 botones, cada uno va a redirigir a la secci&#xF3;n que el usuario desee en la parte de view <em>e.g.</em> <code>src/view/fiveFormulas.php</code></p>
+<pre data-role="codeBlock" data-info="PHP" class="language-php"><span class="token operator">&lt;</span><span class="token operator">!</span><span class="token constant">DOCTYPE</span> html<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>html lang<span class="token operator">=</span><span class="token string double-quoted-string">&quot;en&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span>head<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta charset<span class="token operator">=</span><span class="token string double-quoted-string">&quot;UTF-8&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta http<span class="token operator">-</span>equiv<span class="token operator">=</span><span class="token string double-quoted-string">&quot;X-UA-Compatible&quot;</span> content<span class="token operator">=</span><span class="token string double-quoted-string">&quot;IE=edge&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>meta name<span class="token operator">=</span><span class="token string double-quoted-string">&quot;viewport&quot;</span> content<span class="token operator">=</span><span class="token string double-quoted-string">&quot;width=device-width, initial-scale=1.0&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>title<span class="token operator">&gt;</span>Calculadora Fuerza<span class="token operator">&lt;</span><span class="token operator">/</span>title<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string double-quoted-string">&quot;preconnect&quot;</span> href<span class="token operator">=</span><span class="token string double-quoted-string">&quot;https://fonts.googleapis.com&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string double-quoted-string">&quot;preconnect&quot;</span> href<span class="token operator">=</span><span class="token string double-quoted-string">&quot;https://fonts.gstatic.com&quot;</span> crossorigin<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link href<span class="token operator">=</span><span class="token string double-quoted-string">&quot;https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap&quot;</span> rel<span class="token operator">=</span><span class="token string double-quoted-string">&quot;stylesheet&quot;</span><span class="token operator">&gt;</span>    
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string double-quoted-string">&quot;stylesheet&quot;</span> href<span class="token operator">=</span><span class="token string double-quoted-string">&quot;/src/css/main.css&quot;</span><span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>link rel<span class="token operator">=</span><span class="token string double-quoted-string">&quot;stylesheet&quot;</span> href<span class="token operator">=</span><span class="token string double-quoted-string">&quot;/src/css/normalize.css&quot;</span><span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>head<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span>body<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>div id<span class="token operator">=</span><span class="token string double-quoted-string">&quot;app&quot;</span> <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;app&quot;</span><span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>h1 <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;title&quot;</span><span class="token operator">&gt;</span>&#xBF;Que quiere calcular<span class="token operator">?</span><span class="token operator">&lt;</span><span class="token operator">/</span>h1<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;button&quot;</span> id<span class="token operator">=</span><span class="token string double-quoted-string">&quot;btnSecondNewtonLaw&quot;</span><span class="token operator">&gt;</span>Segunda ley de newton<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;button&quot;</span> id<span class="token operator">=</span><span class="token string double-quoted-string">&quot;btnAccelerationFormula&quot;</span><span class="token operator">&gt;</span><span class="token constant">F</span>&#xF3;rmulas de la aceleraci&#xF3;n<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+            <span class="token operator">&lt;</span>button <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;button&quot;</span> id<span class="token operator">=</span><span class="token string double-quoted-string">&quot;btnSumaVectorial&quot;</span><span class="token operator">&gt;</span>Suma vectorial<span class="token operator">&lt;</span><span class="token operator">/</span>button<span class="token operator">&gt;</span>
+        <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string double-quoted-string">&quot;/src/js/buttonRedirectionIndex.js&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+    <span class="token operator">&lt;</span>script src<span class="token operator">=</span><span class="token string double-quoted-string">&quot;/src/view/aceleration.php&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span>
+<span class="token operator">&lt;</span><span class="token operator">/</span>body<span class="token operator">&gt;</span>
+
+<span class="token operator">&lt;</span><span class="token operator">/</span>html<span class="token operator">&gt;</span>
+</pre><p>C&#xF3;digo de index.php</p>
+<h3 class="mume-header" id="archivos-js">Archivos js</h3>
+
+<h4 class="mume-header" id="buttonredirectionindexjs">buttonRedirectionIndex.js</h4>
+
+<p>Dentro de estos archivos se encuentra la funcionalidad para redireccionar al usuario del index.php a la p&#xE1;gina deseada del view, cuenta con 3 secciones principales.</p>
+<p>La declaraci&#xF3;n de los botones. Primero se declaran los 3 botones para poder ser identificados por js y poder agregar un evento de escucha.</p>
+<pre data-role="codeBlock" data-info="JS" class="language-javascript">  <span class="token keyword keyword-const">const</span> btnSecondNewtonLaw <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;btnSecondNewtonLaw&quot;</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> btnAccelerationFormula <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;btnAccelerationFormula&quot;</span><span class="token punctuation">)</span>
+  <span class="token keyword keyword-const">const</span> btnSumaVectorial <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;btnSumaVectorial&quot;</span><span class="token punctuation">)</span>
+</pre><p>Despu&#xE9;s se le agrega a cada uno de los botones un evento de escucha para que el usuario pueda ser redirigido a la p&#xE1;gina deseada.</p>
+<pre data-role="codeBlock" data-info="JS" class="language-javascript">  btnSecondNewtonLaw<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">href</span> <span class="token operator">=</span> <span class="token string">&quot;/src/view/force.php&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  btnAccelerationFormula<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">href</span> <span class="token operator">=</span> <span class="token string">&quot;/src/view/fiveFormulas.php&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+  btnSumaVectorial<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+      <span class="token dom variable">location</span><span class="token punctuation">.</span><span class="token property-access">href</span> <span class="token operator">=</span> <span class="token string">&quot;/src/view/vectorialSum.php&quot;</span>
+  <span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="mainjs">main.js</h4>
+
+<p>Dentro de este archivo <code>main.js</code> se encuentra la funcionalidad para cambiar las unidades de medida del sistema internacional al sistema ingl&#xE9;s en las secciones en las que sea necesario.</p>
+<p>Primero se detectan 2 radioButtons, los cuales son <em>isRadio</em> y <em>usRadio</em> los cuales representan el sistema internacional y el sistema ingles respectivamente</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> isRadio <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;is&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> usRadio <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;us&quot;</span><span class="token punctuation">)</span>
+</pre><p>Despues, para cada uno de los radio buttons se le agrega un evento de escucha de <em>click</em> para que al hacer click sobre alguno de ellos se cambien los placeholders de los inputs necesarios (dentro de el c&#xE1;lculo para la segunda ley de Newton).</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">isRadio<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> weightInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;weight_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> massInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;mass_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> acelerationInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;aceleration_input&quot;</span><span class="token punctuation">)</span>
+    
+    weightInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;N&quot;</span><span class="token punctuation">)</span>
+    massInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;Kg&quot;</span><span class="token punctuation">)</span>
+    acelerationInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;m/s&#xB2;&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+usRadio<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> weightInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;weight_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> massInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;mass_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> acelerationInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;aceleration_input&quot;</span><span class="token punctuation">)</span>
+
+    weightInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;lb&quot;</span><span class="token punctuation">)</span>
+    massInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;slugs&quot;</span><span class="token punctuation">)</span>
+    acelerationInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ft/s&#xB2;&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="changingplaceholdersxformula">changingPlaceHoldersXFormula</h4>
+
+<p>Al momento de llegar a las 5 f&#xF3;rmulas se utiliz&#xF3; un archivo js independiente para cada view, ya que los inputs pueden variar dentro de las f&#xF3;rmulas, la funcionalidad general de estos archivos es:</p>
+<ul>
+<li>Se toman los radioButtons del sistema internacional y del sistema ingles respectivamente como en el main.js, solo que ahora tambi&#xE9;n vamos a obtener el <strong>form</strong>, esto con la finalidad de <strong>validar</strong> que el usuario <strong>llene todos los campos</strong></li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> isRadio <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;is&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> usRadio <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;us&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> form <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;form&quot;</span><span class="token punctuation">)</span>
+</pre><ul>
+<li>Se le a&#xF1;ade un evento de escucha a cada radioButton para cmabiar los placeholders de los inputs, como en ejemplo del main.js, solo que en cada vista nueva el id de los inputs cambia, por lo cual no se puede simplemente reutilizar el codigo anterior.</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">isRadio<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> initial_velocity_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;initial_velocity_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> final_velocity_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;final_velocity_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> time_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;time_input&quot;</span><span class="token punctuation">)</span>
+    
+    initial_velocity_input<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;m/s&#xB2;&quot;</span><span class="token punctuation">)</span>
+    final_velocity_input<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;m/s&#xB2;&quot;</span><span class="token punctuation">)</span>
+    time_input<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;s&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+
+usRadio<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-const">const</span> initial_velocity_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;initial_velocity_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> final_velocity_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;final_velocity_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> time_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;time_input&quot;</span><span class="token punctuation">)</span>
+
+    initial_velocity_input<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ft/s&#xB2;&quot;</span><span class="token punctuation">)</span>
+    final_velocity_input<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;ft/s&#xB2;&quot;</span><span class="token punctuation">)</span>
+    time_input<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;s&quot;</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><ul>
+<li>
+<p>Se le a&#xF1;ade un evento de escucha <strong>submit</strong> al form, y dentro de este se detiene su funcionamiento principal con <code>e.preventDefault()</code> esto con la finalidad de que la p&#xE1;gina no se recargue al enviar los datos y primero validarlos.</p>
+<p>Posteriormente se crean variables para cada input, esto para dentro de un if, verificar que todos los inputs esten llenos. Si todos los inputs est&#xE1;n llenos se procede con el submit del form con <code>form.submit()</code>, en caso contrario, se le notifica al usuario de que llene los campos</p>
+</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">form<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;submit&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token method function property-access">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> initial_velocity_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;initial_velocity_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> final_velocity_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;final_velocity_input&quot;</span><span class="token punctuation">)</span>
+    <span class="token keyword keyword-const">const</span> time_input <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;time_input&quot;</span><span class="token punctuation">)</span>
+
+    <span class="token keyword control-flow keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token punctuation">(</span>initial_velocity_input<span class="token punctuation">.</span><span class="token property-access">value</span> <span class="token operator">==</span> <span class="token string">&quot;&quot;</span> <span class="token operator">||</span> final_velocity_input<span class="token punctuation">.</span><span class="token property-access">value</span> <span class="token operator">==</span> <span class="token string">&quot;&quot;</span> <span class="token operator">||</span> time_input<span class="token punctuation">.</span><span class="token property-access">value</span> <span class="token operator">==</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        form<span class="token punctuation">.</span><span class="token method function property-access">submit</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span> <span class="token keyword control-flow keyword-else">else</span> <span class="token punctuation">{</span>
+        <span class="token function">alert</span><span class="token punctuation">(</span><span class="token string">&quot;Llene los campos&quot;</span><span class="token punctuation">)</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><h4 class="mume-header" id="addingvectorsjs">addingVectors.js</h4>
+
+<p>La funcionalidad principal de este archivo es para que el usuario pueda agregar la <em>n</em> cantidad de vectores que nececite para la suma vectorial</p>
+<p>Lo primero que hace el archivo es obtener el formulario, el un bot&#xF3;n <code>btnCrearVectores</code> e inicializar una variable llamada <code>nVectores</code> este &#xFA;ltimo con la finalidad de obtener el n&#xFA;mero de vectores que el usuario necesita.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> form <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;form&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> btnCrearVectores <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;btnCrearVectores&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-let">let</span> nVectores
+</pre><p>Posteriormente se le a&#xF1;ade un evento de escucha al bot&#xF3;n y se le le interrumpe su funcionalidad default</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">btnCrearVectores<span class="token punctuation">.</span><span class="token method function property-access">addEventListener</span><span class="token punctuation">(</span><span class="token string">&quot;click&quot;</span><span class="token punctuation">,</span> <span class="token punctuation">(</span><span class="token parameter">e</span><span class="token punctuation">)</span> <span class="token arrow operator">=&gt;</span> <span class="token punctuation">{</span>
+    e<span class="token punctuation">.</span><span class="token method function property-access">preventDefault</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">}</span><span class="token punctuation">)</span>
+</pre><p>A partir de ahora todo el c&#xF3;digo restante (de este archivo) se encontrar&#xE1; dentro de esta funci&#xF3;n <code>addEventListener()</code></p>
+<p>Primero se crean 2 variables, una llamada <code>vectoresInput</code> la cual es un input que se encuentra en la vista, dentro de la cual el usuario va a introducir la cantidad de vectores que desea utilizar; y otra llamada <code>submitCalcular</code> la cual es un bot&#xF3;n de tipo <em>submit</em> el cual utilizaremos mas adelante.</p>
+<p>Posteriormente a <code>nVectores</code> se le asigna el valor del input del n&#xFA;mero de vectores.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-const">const</span> vectoresInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">getElementById</span><span class="token punctuation">(</span><span class="token string">&quot;nVectores&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-const">const</span> submitCalcular <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;input&quot;</span><span class="token punctuation">)</span>
+nVectores <span class="token operator">=</span> vectoresInput<span class="token punctuation">.</span><span class="token property-access">value</span>
+</pre><p>Al <code>submitCalcular</code> se le van a a&#xF1;adir 3 atributos:</p>
+<ul>
+<li><strong>type:</strong> para el tipo del input, el cual va a ser sumbit</li>
+<li><strong>value:</strong> para el texto que va a tener este submit</li>
+<li><strong>class:</strong> para a&#xF1;adir estilos posteriormente.</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">submitCalcular<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;submit&quot;</span><span class="token punctuation">)</span>
+submitCalcular<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;value&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;calcular&quot;</span><span class="token punctuation">)</span>
+submitCalcular<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;class&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;submit-calcular&quot;</span><span class="token punctuation">)</span>
+</pre><p>Posteriormente se crea un <code>for</code> el cual va a iterar desde 0 hasta la cantidad de vectores, la cual se va a encargar de crear los inputs para cada vector, con su magnitud y su direcci&#xF3;n (en Newtons y en grados)</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword control-flow keyword-for">for</span><span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>nVectores<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+</pre><p>Dentro de ese for se realizan las siguientes acciones:</p>
+<ul>
+<li>
+<p>Se crean 4 variables, dos labels y 2 inputs, los cuales 2 para la magnitud y 2 para la direcci&#xF3;n respectivamente.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-let">let</span> magnitudLabel <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;label&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-let">let</span> direcccionLabel <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;label&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-let">let</span> magnitudInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;input&quot;</span><span class="token punctuation">)</span>
+<span class="token keyword keyword-let">let</span> direccionInput <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;input&quot;</span><span class="token punctuation">)</span>
+</pre></li>
+<li>
+<p>Se crea un div, el cual se utilizar&#xE1; mas adelante, a este se le va a a&#xF1;adir la clase &quot;vector-inputs-container&quot; esto con la finalidad de agregar estilos posteriormente</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript"><span class="token keyword keyword-let">let</span> div <span class="token operator">=</span> <span class="token dom variable">document</span><span class="token punctuation">.</span><span class="token method function property-access">createElement</span><span class="token punctuation">(</span><span class="token string">&quot;div&quot;</span><span class="token punctuation">)</span>
+div<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;class&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;vector-inputs-container&quot;</span><span class="token punctuation">)</span>
+</pre></li>
+<li>
+<p>A los 2 labels se les a&#xF1;ade el atributo &quot;for&quot; para identificarlos y dentro de su HTML se le introduce el texto para saber a que input van dirigidos.</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">magnitudLabel<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;for&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;magnitud&quot;</span><span class="token punctuation">)</span>
+direcccionLabel<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;for&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;direccion&quot;</span><span class="token punctuation">)</span>
+magnitudLabel<span class="token punctuation">.</span><span class="token property-access">innerHTML</span> <span class="token operator">=</span> <span class="token string">&quot;Magnitud&quot;</span>
+direcccionLabel<span class="token punctuation">.</span><span class="token property-access">innerHTML</span> <span class="token operator">=</span> <span class="token string">&quot;Direcci&#xF3;n: (&#xE1;ngulo polar)&quot;</span>
+</pre></li>
+<li>
+<p>Se le a&#xF1;ade a los 2 inputs los atributos necesarios con sus valores.</p>
+<ul>
+<li><strong>name:</strong> para identificarlo en el metodo GET que vamos a utilizar posteriormente (este atributo es din&#xE1;mico, ya que su valor toma el nombre de &quot;direccion&quot; mas el valor de la iteraci&#xF3;n)</li>
+<li><strong>id:</strong> Para poder identificarlo (este atributo tambi&#xE9;n es din&#xE1;mico, toma un valor de &quot;direccion&quot; mas el valor de la iteraci&#xF3;n al igual que el anterior)</li>
+<li><strong>placeholder:</strong> para a&#xF1;adir un placeholder y que el usuario sepa que debe ingresar</li>
+<li><strong>type:</strong> para darle un tipo al input y que solo se puedan introducir n&#xFA;meros.</li>
+<li><strong>step:</strong> para que se puedan a&#xF1;adir n&#xFA;meros decimales, se le a&#xF1;ade unv valor de &quot;any&quot; para que se puedan a&#xF1;adir cualquier tipo de decimales</li>
+<li><strong>required:</strong> para que el input sea requerido y no pueda irse vac&#xED;o antes de subir el formulario</li>
+<li><strong>min:</strong> para dar un valor m&#xED;nimo al input y que no se a&#xF1;adan valores de 0 o negativos.</li>
+</ul>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">magnitud_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">magnitud_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">N</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">number</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;step&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;any&quot;</span><span class="token punctuation">)</span>
+magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;required&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+magnitudInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;min&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;name&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">direccion_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;id&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">direccion_</span><span class="token interpolation"><span class="token interpolation-punctuation punctuation">${</span>i<span class="token interpolation-punctuation punctuation">}</span></span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;placeholder&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">&#xB0; (&#x3B8;)</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;type&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">number</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;step&quot;</span><span class="token punctuation">,</span> <span class="token template-string"><span class="token template-punctuation string">`</span><span class="token string">any</span><span class="token template-punctuation string">`</span></span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;required&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;&quot;</span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;min&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;1&quot;</span><span class="token punctuation">)</span>
+direccionInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;max&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;360&quot;</span><span class="token punctuation">)</span>
+</pre></li>
+<li>
+<p>Despues de crear los inputs necesarios con sus atributos, se a&#xF1;aden al div y el div se a&#xF1;ade al form respectivamente</p>
+<pre data-role="codeBlock" data-info="js" class="language-javascript">div<span class="token punctuation">.</span><span class="token method function property-access">appendChild</span><span class="token punctuation">(</span>magnitudLabel<span class="token punctuation">)</span>
+div<span class="token punctuation">.</span><span class="token method function property-access">appendChild</span><span class="token punctuation">(</span>magnitudInput<span class="token punctuation">)</span>
+div<span class="token punctuation">.</span><span class="token method function property-access">appendChild</span><span class="token punctuation">(</span>direcccionLabel<span class="token punctuation">)</span>
+div<span class="token punctuation">.</span><span class="token method function property-access">appendChild</span><span class="token punctuation">(</span>direccionInput<span class="token punctuation">)</span>
+form<span class="token punctuation">.</span><span class="token method function property-access">appendChild</span><span class="token punctuation">(</span>div<span class="token punctuation">)</span>
+</pre></li>
+</ul>
+<p>Una vez que el <code>for</code> ha terminado (se craron todos los inputs necesarios para la n cantidad de vectores) se eliminan del form 2 elementos hijos (un heading y el bot&#xF3;n para generar los inputs) para que el usuario ya no pueda modificar el HTML, pero se deja el input (ya que ese valor nos va a servir posteriormente para el c&#xE1;lculo de los vectores) a ese input solamente se le va a a&#xF1;adir la clase &quot;hidden&quot; para que el css sea capaz de ocultarlo.</p>
+<p>Al bot&#xF3;n de submit que creamos anteriormente se a&#xF1;ade al form tambi&#xE9;n</p>
+<pre data-role="codeBlock" data-info="JS" class="language-javascript">form<span class="token punctuation">.</span><span class="token method function property-access">removeChild</span><span class="token punctuation">(</span>form<span class="token punctuation">.</span><span class="token property-access">children</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+form<span class="token punctuation">.</span><span class="token method function property-access">removeChild</span><span class="token punctuation">(</span>form<span class="token punctuation">.</span><span class="token property-access">children</span><span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+form<span class="token punctuation">.</span><span class="token method function property-access">appendChild</span><span class="token punctuation">(</span>submitCalcular<span class="token punctuation">)</span>
+vectoresInput<span class="token punctuation">.</span><span class="token method function property-access">setAttribute</span><span class="token punctuation">(</span><span class="token string">&quot;class&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;hidden&quot;</span><span class="token punctuation">)</span>
+</pre><h3 class="mume-header" id="archivos-php">Archivos php</h3>
+
+<p>Los siguientes archivos son los encargados de la funcionalidad de la p&#xE1;gina, ya que a estos se les va a enviar la informaci&#xF3;n de los inputs de los diferentes views del usuario.</p>
+<h4 class="mume-header" id="calcforcephp">calcForce.php</h4>
+
+<p>Este archivo se encarga de calclular lo necesario para la segunda ley de newton.</p>
+<p>Este archivo es llamado desde <code>/src/view/force.php</code> desde la cual se le va a enviar datos mediante el m&#xE9;todo <code>GET</code>, que es lo primero que hace este archivo; almacenar los datod que se obtienen del <em>GET</em></p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$system</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;system&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$force</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;force&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$mass</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;mass&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$aceleration</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;aceleration&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><p>Despues se declara una variable <code>$isInternationalSystem</code> la cual va a tomar un valor booleano dependiendo de si se escogi&#xF3; el sistema internacional o no</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$isInternationalSystem</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token variable">$system</span> <span class="token operator">==</span> <span class="token string single-quoted-string">&apos;isSystem&apos;</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token constant boolean">true</span> <span class="token punctuation">:</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+</pre><p>Posteriormente se declaran 3 variables:</p>
+<ul>
+<li><code>$ressult</code>: tomar&#xE1; el valor de el string final para mostrar el resultado al usuaio.</li>
+<li><code>$empty</code>: tomar&#xE1; el valor de lo que se va a sacar (fuerza, masa o aceleraci&#xF3;n)</li>
+<li><code>$units</code>: tomar&#xE1; el valor de las unidades de medidas</li>
+</ul>
+<p>Despu&#xE9;s de eso, se inserta un if, el cual solo se ejecutar&#xE1; si se ha escogido el sistema internacional de unidades.</p>
+<p>Este bloque de c&#xF3;digo verifica que input queed&#xF3; vac&#xED;o, esto con el fin de sabe que es lo que se queire calcular (si es fuerza, masa o aceleraci&#xF3;n) y se aplicar&#xE1; la formula necesaria para cada caso.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$isInternationalSystem</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$force</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$ressult</span> <span class="token operator">=</span> <span class="token variable">$mass</span> <span class="token operator">*</span> <span class="token variable">$aceleration</span><span class="token punctuation">;</span>
+        <span class="token variable">$units</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;N&apos;</span><span class="token punctuation">;</span>
+        <span class="token variable">$empty</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;fuerza&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$mass</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$ressult</span> <span class="token operator">=</span> <span class="token variable">$force</span> <span class="token operator">/</span> <span class="token variable">$aceleration</span><span class="token punctuation">;</span>
+        <span class="token variable">$units</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;Kg&apos;</span><span class="token punctuation">;</span>
+        <span class="token variable">$empty</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;masa&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$aceleration</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$ressult</span> <span class="token operator">=</span> <span class="token variable">$force</span> <span class="token operator">/</span> <span class="token variable">$mass</span><span class="token punctuation">;</span>
+        <span class="token variable">$units</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;m/s&#xB2;&apos;</span><span class="token punctuation">;</span>
+        <span class="token variable">$empty</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;aceleraci&#xF3;n&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>El siguiente bloque de c&#xF3;digo es otro condicional de tipo <code>if</code> el cual se ejecutar&#xE1; si se escoge el sitema ingl&#xE9;s, que hace practicamente lo mismo que el anteri&#xF3;r bloque de c&#xF3;digo solamente que con las unidades del sistema ingles</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token operator">!</span><span class="token variable">$isInternationalSystem</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$force</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$ressult</span> <span class="token operator">=</span> <span class="token variable">$mass</span> <span class="token operator">*</span> <span class="token variable">$aceleration</span><span class="token punctuation">;</span>
+        <span class="token variable">$units</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;lb&apos;</span><span class="token punctuation">;</span>
+        <span class="token variable">$empty</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;fuerza&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$mass</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$ressult</span> <span class="token operator">=</span> <span class="token variable">$force</span> <span class="token operator">/</span> <span class="token variable">$aceleration</span><span class="token punctuation">;</span>
+        <span class="token variable">$units</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;slugs&apos;</span><span class="token punctuation">;</span>
+        <span class="token variable">$empty</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;masa&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token keyword keyword-empty">empty</span><span class="token punctuation">(</span><span class="token variable">$aceleration</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token variable">$ressult</span> <span class="token operator">=</span> <span class="token variable">$force</span> <span class="token operator">/</span> <span class="token variable">$mass</span><span class="token punctuation">;</span>
+        <span class="token variable">$units</span> <span class="token operator">=</span> <span class="token string single-quoted-string">&apos;ft/s&#xB2;&apos;</span><span class="token punctuation">;</span>
+        <span class="token variable">$empty</span> <span class="token operator">=</span> <span class="token string double-quoted-string">&quot;aceleraci&#xF3;n&quot;</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+<span class="token punctuation">}</span>
+</pre><p>Posteriormente se tiene un HTML b&#xE1;sico, dentro del cual se tiene un t&#xED;tulo y un p&#xE1;rrafo en el cual se insertan nuestras variables con unidad de medida.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"> <span class="token operator">&lt;</span>p <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;text&quot;</span><span class="token operator">&gt;</span>La
+    <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword keyword-echo">echo</span> <span class="token variable">$empty</span> <span class="token operator">?</span><span class="token operator">&gt;</span> es<span class="token punctuation">:</span>
+    <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword keyword-echo">echo</span> <span class="token variable">$ressult</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-echo">echo</span> <span class="token variable">$units</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+  <span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+</pre><p>El resultado para el usuario con los datos de 2 para fuerza y 3 para masa es:</p>
+<p align="center">
+  <img src="src/assets/img/docs/calcular_segunda_ley_newton.png">
+</p>
+<h4 class="mume-header" id="calcxformulaphp">calcXFormula.php</h4>
+
+<p>Para calcular las 5 f&#xF3;rmulas para la aceleraci&#xF3;n se tienen 5 archivos diferentes, pero a grandes razgos hacen lo mismo.</p>
+<p>Son llamados desde su archivo correspondiente para cada f&#xF3;rmula desde <code>/src/view/</code></p>
+<p>Lo primero que hacen estos archivos es obtener las variables necesarias para calcular el resultado de la f&#xF3;rmula (el nombre de las variables puede variar dependiendo de la f&#xF3;rmula que se desea utilizar).</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$system</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;system&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$initial_velocity</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;vi&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$final_velocity</span>  <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;vf&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token variable">$time</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;t&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><p>Despu&#xE9;s se guada una variable booleana para saber si se esta usarndo el sistema internacional o el sistema ingles.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$isInternationalSystem</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token variable">$system</span> <span class="token operator">==</span> <span class="token string single-quoted-string">&apos;isSystem&apos;</span><span class="token punctuation">)</span> <span class="token operator">?</span> <span class="token constant boolean">true</span> <span class="token punctuation">:</span> <span class="token constant boolean">false</span><span class="token punctuation">;</span>
+</pre><p>Posteriormente se calcula lo necesario para la f&#xF3;rmula (el como se obtiene el valor de esta variable puede variar dependiendo de la f&#xF3;rmula a utilizar)</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$distance</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token punctuation">(</span><span class="token variable">$initial_velocity</span> <span class="token operator">+</span> <span class="token variable">$final_velocity</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">*</span> <span class="token variable">$time</span><span class="token punctuation">;</span>
+</pre><p>Finalmente se tiene un HTML b&#xE1;sico el en el cual se imprime el valor obtenido (se tiene mas c&#xF3;digo HTML, pero no es necesario indagar en eso en estos momentos).</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token operator">&lt;</span>p <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;text&quot;</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword keyword-echo">echo</span> <span class="token variable">$ressult</span> <span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+</pre><p>Una demostraci&#xF3;n de como se ver&#xED;a esta pantalla hacia el usuario (utilizando como ejemplo la primera f&#xF3;rmula) con los datos para:</p>
+<ul>
+<li>Velocidad inicial: 15</li>
+<li>Velocidad final: 20</li>
+<li>Tiempo: 5</li>
+</ul>
+<p align="center">
+  <img src="src/assets/img/docs/primera_formula.png">
+</p>
+<h4 class="mume-header" id="calcvectoresphp">calcVectores.php</h4>
+
+<p>Este archivo se encarga de calcular la suma vectorial. (el orden en el que aqu&#xED; se muestran las cosas es el orden de ejecuci&#xF3;n, el orden del c&#xF3;digo es difernete).</p>
+<p>Este archivo es llamado desde <code>src/view/vectorialSum.php</code> el cual contiene un form que va a enviar ciertos datos utilizando el m&#xE9;todo <code>GET</code> hacia este archivo</p>
+<p>Lo primero que hace este archivo es instanciar 4 variables las cuales son arrays, cada uno va a almaccenar lo que su nombre lo indica.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$listaMagnitudes</span> <span class="token operator">=</span> <span class="token keyword keyword-array">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Almacena las magnitudes de los vectores</span>
+<span class="token variable">$listaDirecciones</span> <span class="token operator">=</span> <span class="token keyword keyword-array">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Almacena las direcciones de los vectores</span>
+<span class="token variable">$valoresX</span> <span class="token operator">=</span> <span class="token keyword keyword-array">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Almacena los valores x de los vectores Fcos(X)</span>
+<span class="token variable">$valoresY</span> <span class="token operator">=</span> <span class="token keyword keyword-array">array</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment">// Almacena los valores de y de los vectores Fsen(x)</span>
+</pre><p>Despues de eso crea una variable llamada <code>$nVectores</code> la cual va a alamcenar el n&#xFA;mero de vectores que seleccion&#xF3; el usuario (desde un input vaci&#xF3; en el HTML)</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token variable">$nVectores</span> <span class="token operator">=</span> <span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string single-quoted-string">&apos;nVectores&apos;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+</pre><p>Posteriormente realiza un ciclo de tipo <code>for</code> el cual se va a ejecutar desde 0 hasta <code>$nVecctores</code> el cual su funcionamiento va a ser almacenar la magnitud y la direcci&#xF3;n de el vector con &#xED;ndice <code>$i</code> (estos son tomados del HTML)</p>
+<p>Posteriormente almacena sus valores de X y de Y en los arrays <code>$ValoresX[$i]</code> y <code>$ValoresY[$i]</code> respectivamente.</p>
+<p>Despu&#xE9;s se hace una peque&#xF1;a excepci&#xF3;n, ya que las funciones de <code>sin()</code> y  <code>cos()</code> de php solo aceptan radianes, por lo cual se nececita hacer un cambio de unidades, dentro del cu&#xE1;l con la funci&#xF3;n <code>deg2Rad()</code> al momento de hacer la conversi&#xF3;n en los senos de 180 en vez de tomar un valor 0, toma un valor muy cercano a 0.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token variable">$nVectores</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+    <span class="token variable">$magnitud</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword type-casting keyword-int">int</span><span class="token punctuation">)</span><span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string double-quoted-string">&quot;magnitud_<span class="token interpolation"><span class="token variable">$i</span></span>&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token variable">$direccion</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token keyword type-casting keyword-int">int</span><span class="token punctuation">)</span><span class="token global">$_GET</span><span class="token punctuation">[</span><span class="token string double-quoted-string">&quot;direccion_<span class="token interpolation"><span class="token variable">$i</span></span>&quot;</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    
+    <span class="token variable">$valoresX</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token variable">$magnitud</span> <span class="token operator">*</span> <span class="token function">cos</span><span class="token punctuation">(</span><span class="token function">deg2rad</span><span class="token punctuation">(</span><span class="token variable">$direccion</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token variable">$valoresY</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">(</span><span class="token variable">$magnitud</span> <span class="token operator">*</span> <span class="token function">sin</span><span class="token punctuation">(</span><span class="token function">deg2rad</span><span class="token punctuation">(</span><span class="token variable">$direccion</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$direccion</span> <span class="token operator">==</span> <span class="token number">180</span><span class="token punctuation">)</span> <span class="token variable">$valoresY</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$direccion</span> <span class="token operator">==</span> <span class="token number">360</span><span class="token punctuation">)</span> <span class="token variable">$valoresY</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$direccion</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token variable">$valoresY</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Posteriormente se declaran 2 variables, las cuales son <code>$sumaX</code> y <code>$sumaY</code> las cuales van a tomar el valor que les retornen las funciones <code>sumarValoresX()</code> y <code>sumarValoresY()</code> Respectivamente.</p>
+<p>Ya que la funcinalidad de ambas es muy similar se explicar&#xE1; a fondo unicamente <code>sumarValoresX()</code>.</p>
+<ul>
+<li>Lo primero que hace esta funci&#xF3;n es recibir 2 par&#xE1;metros; el primero es un array el cual contiene todos los valores de x de todos los vectores, el segundo valor que recibe esta funci&#xF3;n es la cantidad de vectores que el usuario pidi&#xF3;.</li>
+<li>Posteriormente declara una variable llamada <code>$sumaX</code> y se le asigna un valor de 0</li>
+<li>Se instancia un ciclo <code>for</code> el cual va a recorrer desde 0 a la cantidad de vectores. Dentro de este for se va a hacer la sumatoria total de los valores de X desde el primer hasta el &#xFA;ltimo vector.</li>
+</ul>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-function">function</span> <span class="token function-definition function">sumarValoresX</span> <span class="token punctuation">(</span><span class="token variable">$valoresX</span><span class="token punctuation">,</span> <span class="token variable">$nVectores</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token variable">$sumaX</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token variable">$nVectores</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token variable">$sumaX</span> <span class="token operator">=</span> <span class="token variable">$sumaX</span> <span class="token operator">+</span> <span class="token variable">$valoresX</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    
+    <span class="token keyword keyword-return">return</span> <span class="token variable">$sumaX</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>La funci&#xF3;n de sumarValoresY hace basicamente lo mismo pero con los valores en Y de los vectores.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-function">function</span> <span class="token function-definition function">sumarValoresY</span> <span class="token punctuation">(</span><span class="token variable">$valoresY</span><span class="token punctuation">,</span> <span class="token variable">$nVectores</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token variable">$sumaY</span> <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword keyword-for">for</span> <span class="token punctuation">(</span><span class="token variable">$i</span><span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span> <span class="token variable">$i</span> <span class="token operator">&lt;</span> <span class="token variable">$nVectores</span><span class="token punctuation">;</span> <span class="token variable">$i</span><span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span> 
+        <span class="token variable">$sumaY</span> <span class="token operator">=</span> <span class="token variable">$sumaY</span> <span class="token operator">+</span> <span class="token variable">$valoresY</span><span class="token punctuation">[</span><span class="token variable">$i</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token keyword keyword-return">return</span> <span class="token variable">$sumaY</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Posteriormente se declara una variable llamada <code>$fuerzaFinal</code> que adquiere el valor que le retorne la funci&#xF3;n <code>fuerzaFinal()</code></p>
+<p>La funci&#xF3;n <code>fuerzaFinal($)</code> recibe 2 par&#xE1;metros; el primero es la sumatoria de X y el segundo es la sumatoria de Y.</p>
+<p>La funci&#xF3;n se encarga de retornar el valor de la fuerza final con la f&#xF3;rmula correspondiente.</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-function">function</span> <span class="token function-definition function">fuerzaFinal</span> <span class="token punctuation">(</span><span class="token variable">$sumaX</span><span class="token punctuation">,</span> <span class="token variable">$sumaY</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-return">return</span> <span class="token function">sqrt</span><span class="token punctuation">(</span><span class="token function">pow</span><span class="token punctuation">(</span><span class="token variable">$sumaX</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">+</span> <span class="token function">pow</span><span class="token punctuation">(</span><span class="token variable">$sumaY</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Despues de calcular la fuerza final, se nececita obtener el &#xE1;ngulo final, el cual se guarda en una variable llamada <code>$anguloFinal</code> la cual recibe el valor que retorne la funcion <code>anguloFinal()</code>.</p>
+<p>Esta funci&#xF3;n recibe 2 valores <code>$sumaX</code> y <code>$sumaY</code> y retorna el valor correspondiente del &#xE1;ngulo polar dependiendo del cuadrante en el que se encuentra, eso est&#xE1; validado por condicionales <code>if</code> para saber en que cuadrante se encuentra, en caso de que la fuerza final no pertenezca a ning&#xFA;n cuadrante se retorna 0</p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token keyword keyword-function">function</span> <span class="token function-definition function">anguloFinal</span> <span class="token punctuation">(</span><span class="token variable">$sumaX</span><span class="token punctuation">,</span> <span class="token variable">$sumaY</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$sumaX</span> <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token variable">$sumaY</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token variable">$sumaY</span> <span class="token operator">/</span> <span class="token variable">$sumaX</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$sumaX</span> <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token variable">$sumaY</span> <span class="token operator">&gt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span> <span class="token number">180</span> <span class="token operator">-</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token variable">$sumaY</span> <span class="token operator">/</span> <span class="token variable">$sumaX</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$sumaX</span> <span class="token operator">&lt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token variable">$sumaY</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span> <span class="token number">180</span> <span class="token operator">+</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token variable">$sumaY</span> <span class="token operator">/</span> <span class="token variable">$sumaX</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    
+    <span class="token keyword keyword-if">if</span> <span class="token punctuation">(</span><span class="token variable">$sumaX</span> <span class="token operator">&gt;</span> <span class="token number">0</span> <span class="token operator">&amp;&amp;</span> <span class="token variable">$sumaY</span> <span class="token operator">&lt;</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword keyword-return">return</span> <span class="token number">360</span> <span class="token operator">-</span> <span class="token function">abs</span><span class="token punctuation">(</span><span class="token function">rad2deg</span><span class="token punctuation">(</span><span class="token function">atan</span><span class="token punctuation">(</span><span class="token variable">$sumaY</span> <span class="token operator">/</span> <span class="token variable">$sumaX</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+
+    <span class="token keyword keyword-return">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</pre><p>Posteriormente se tiene un HTML b&#xE1;sico, en el cual, al igual que en los otros c&#xE1;lculos se muestra al usuario el resultado final mediante una etiqueta <code>&lt;p&gt;</code></p>
+<pre data-role="codeBlock" data-info="php" class="language-php"><span class="token operator">&lt;</span>p <span class="token keyword keyword-class">class</span><span class="token operator">=</span><span class="token string double-quoted-string">&quot;text&quot;</span><span class="token operator">&gt;</span>La fuerza resultante es de<span class="token punctuation">:</span> <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword keyword-echo">echo</span> <span class="token variable">$fuerzaFinal</span> <span class="token operator">?</span><span class="token operator">&gt;</span>
+con un &#xE1;ngulo de <span class="token operator">&lt;</span><span class="token operator">?</span>php <span class="token keyword keyword-echo">echo</span> <span class="token variable">$anguloFinal</span> <span class="token operator">?</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>p<span class="token operator">&gt;</span>
+</pre><p>La visualizaci&#xF3;n de la p&#xE1;gina suponiendo 2 vectores, uno de 20N con un &#xE1;ngulo de 15&#xB0; y uno de 30N con un &#xE1;ngulo de 45&#xB0; es:</p>
+<p align="center">
+  <img src="src/assets/img/docs/resultado_suma_vectorial.png">
+</p>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>

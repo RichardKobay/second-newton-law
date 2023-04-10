@@ -22,45 +22,50 @@ $empty = "";
 $units = "";
 
 
-if ($isInternationalSystem) {
-    if (empty($force)) {
-        $ressult = $mass * $aceleration;
-        $units = 'N';
-        $empty = "fuerza";
+try {
+    if ($isInternationalSystem) {
+        if (empty($force)) {
+            $ressult = $mass * $aceleration;
+            $units = 'N';
+            $empty = "fuerza";
+        }
+    
+        if (empty($mass)) {
+            $ressult = $force / $aceleration;
+            $units = 'Kg';
+            $empty = "masa";
+        }
+    
+        if (empty($aceleration)) {
+            $ressult = $force / $mass;
+            $units = 'm/s²';
+            $empty = "aceleración";
+        }
     }
-
-    if (empty($mass)) {
-        $ressult = $force / $aceleration;
-        $units = 'Kg';
-        $empty = "masa";
+    
+    if (!$isInternationalSystem) {
+        if (empty($force)) {
+            $ressult = $mass * $aceleration;
+            $units = 'lb';
+            $empty = "fuerza";
+        }
+    
+        if (empty($mass)) {
+            $ressult = $force / $aceleration;
+            $units = 'slugs';
+            $empty = "masa";
+        }
+    
+        if (empty($aceleration)) {
+            $ressult = $force / $mass;
+            $units = 'ft/s²';
+            $empty = "aceleración";
+        }
     }
-
-    if (empty($aceleration)) {
-        $ressult = $force / $mass;
-        $units = 'm/s²';
-        $empty = "aceleración";
-    }
+} catch (ArithmeticError $e) {
+    $empty = "Ha ocurrido un error con las operaciones, revise si los valores dados son válidos";
 }
 
-if (!$isInternationalSystem) {
-    if (empty($force)) {
-        $ressult = $mass * $aceleration;
-        $units = 'lb';
-        $empty = "fuerza";
-    }
-
-    if (empty($mass)) {
-        $ressult = $force / $aceleration;
-        $units = 'slugs';
-        $empty = "masa";
-    }
-
-    if (empty($aceleration)) {
-        $ressult = $force / $mass;
-        $units = 'ft/s²';
-        $empty = "aceleración";
-    }
-}
 
 ?>
 
